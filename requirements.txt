@@ -18,5 +18,9 @@ streamlit_js_eval
 scikit-learn
 pandas
 numpy
+numpy
+opencv-python
+mediapipe==0.10.14
+tensorflow
 python-dotenv
 PyJWT

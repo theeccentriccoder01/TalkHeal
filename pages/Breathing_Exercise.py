@@ -83,7 +83,7 @@ def set_background_for_theme(selected_palette="pink"):
             color: {'#f0f0f0' if is_dark else '#1f2937'} !important;
         }}
 
-        /* Dropdown menu options */
+        
         [role="listbox"] {{
             background-color: {'rgba(50, 50, 50, 0.95)' if is_dark else 'rgba(255, 255, 255, 0.95)'} !important;
         }}

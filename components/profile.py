@@ -288,7 +288,7 @@ def render_profile_section():
     render_profile_stats()
     
     # Add separator
-    st.markdown("---")
+    # st.markdown("---")
 
 
 # Optional: Helper functions for other parts of the app

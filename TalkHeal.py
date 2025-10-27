@@ -81,7 +81,7 @@ with col_buttons:
             st.session_state.show_emergency_page = True
             st.rerun()
     with nav_cols[2]:
-        if st.button("ℹ About", key="about_btn", help="About TalkHeal", use_container_width=True):
+        if st.button("ⓘ About", key="about_btn", help="About TalkHeal", use_container_width=True):
             st.switch_page("pages/About.py")
     with nav_cols[3]:
         if st.button("Logout", key="logout_btn", help="Sign out", use_container_width=True):

@@ -63,10 +63,55 @@ def set_background_for_theme(selected_palette="pink"):
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }}
 
-        h2, h3, h4, h5, h6,
-        p, span, strong, div, label {{
-            color: {'#f0f0f0' if is_dark else 'rgba(49, 51, 63, 0.8)'} !important;
+        h2, h3, h4, h5, h6 {{
+            color: {'#f0f0f0' if is_dark else 'rgba(49, 51, 63, 0.9)'} !important;
             transition: color 0.3s ease;
+        }}
+
+        p, span, strong, div, label {{
+            color: {'#f0f0f0' if is_dark else 'rgba(49, 51, 63, 0.85)'} !important;
+            transition: color 0.3s ease;
+        }}
+
+        /* Fix select/dropdown boxes */
+        [data-baseweb="select"] {{
+            background-color: {'rgba(50, 50, 50, 0.8)' if is_dark else 'rgba(255, 255, 255, 0.9)'} !important;
+        }}
+
+        [data-baseweb="select"] > div {{
+            background-color: {'rgba(50, 50, 50, 0.8)' if is_dark else 'rgba(255, 255, 255, 0.9)'} !important;
+            color: {'#f0f0f0' if is_dark else '#1f2937'} !important;
+        }}
+
+        
+        [role="listbox"] {{
+            background-color: {'rgba(50, 50, 50, 0.95)' if is_dark else 'rgba(255, 255, 255, 0.95)'} !important;
+        }}
+
+        [role="option"] {{
+            background-color: {'rgba(50, 50, 50, 0.95)' if is_dark else 'rgba(255, 255, 255, 0.95)'} !important;
+            color: {'#f0f0f0' if is_dark else '#1f2937'} !important;
+        }}
+
+        [role="option"]:hover {{
+            background-color: {'rgba(70, 70, 70, 0.95)' if is_dark else 'rgba(243, 244, 246, 0.95)'} !important;
+        }}
+
+        /* Fix buttons */
+        .stButton > button {{
+            background-color: {'rgba(59, 130, 246, 0.9)' if is_dark else 'rgb(59, 130, 246)'} !important;
+            color: white !important;
+            border: none !important;
+            font-weight: 600 !important;
+        }}
+
+        .stButton > button:hover {{
+            background-color: {'rgba(37, 99, 235, 0.9)' if is_dark else 'rgb(37, 99, 235)'} !important;
+        }}
+
+        /* Fix slider labels and text */
+        .stSlider label {{
+            color: {'#f0f0f0' if is_dark else 'rgba(49, 51, 63, 0.9)'} !important;
         }}
 
         /* Header bar: fully transparent */
@@ -139,21 +184,102 @@ def calculate_weekly_minutes(log):
 
 # --- UI VIEWS ---
 def show_setup_view():
-    st.markdown("<h1 style='text-align: center; color: teal;'>🧘 Breathing Exercise</h2>", unsafe_allow_html=True)
-    st.markdown("Use this guided exercise to relax. Select a technique, then start your session.")
+    # --- Inject custom CSS for layout and metrics ---
+    st.markdown("""
+    <style>
+    .breathing-container {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #e6f0ff 0%, #fff 100%);
+        border-radius: 18px;
+        margin-bottom: 2rem;
+    }
 
+    .breathing-container h1 {
+        color: #0f766e;
+        font-family: 'Baloo 2', cursive;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .breathing-container p {
+        color: #333;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    .metric-card {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        margin-bottom: 1rem;
+    }
+
+    .metric-card h3 {
+        margin-bottom: 0.5rem;
+        color: #2563eb;
+        font-size: 1.1rem;
+    }
+
+    .metric-card p {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #31333F;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # --- Header Section ---
+    with st.container():
+        st.markdown("""
+        <div class="breathing-container">
+            <h1>🧘 Breathing Exercise</h1>
+            <p>Use this guided exercise to relax. Select a technique, then start your session.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # --- Progress Section ---
     st.markdown("### 📊 Your Progress")
-    col1, col2 = st.columns(2)
-    col1.metric("Current Streak", f"{calculate_streak(st.session_state.session_log)} Days 🔥")
-    col2.metric("This Week's Total", f"{calculate_weekly_minutes(st.session_state.session_log)} Mins")
-    st.markdown("--- ")
 
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown(f"""
+            <div class="metric-card">
+                <h3>Current Streak</h3>
+                <p>{calculate_streak(st.session_state.session_log)} Days 🔥</p>
+            </div>
+        """, unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"""
+            <div class="metric-card">
+                <h3>This Week's Total</h3>
+                <p>{calculate_weekly_minutes(st.session_state.session_log)} Mins</p>
+            </div>
+        """, unsafe_allow_html=True)
+
+    st.divider()
+
+    # --- Session Setup Controls ---
     st.markdown("### ⚙️ Session Setup")
-    st.session_state.breathing_technique = st.selectbox("Choose a Breathing Technique:", options=list(TECHNIQUES.keys()))
-    
-    st.session_state.mood_before = st.slider("First, rate your current stress level (1=Low, 10=High):", 1, 10, 5)
-    st.session_state.session_minutes = st.slider("How many minutes do you want to practice?", 1, 15, 2)
-    
+
+    st.session_state.breathing_technique = st.selectbox(
+        "Choose a Breathing Technique:", 
+        options=list(TECHNIQUES.keys())
+    )
+
+    st.session_state.mood_before = st.slider(
+        "Rate your current stress level (1 = Low, 10 = High):", 
+        1, 10, 5
+    )
+
+    st.session_state.session_minutes = st.slider(
+        "How many minutes do you want to practice?", 
+        1, 15, 2
+    )
+
     if st.button("Start Session"):
         st.session_state.page_state = 'RUNNING'
         st.rerun()
@@ -216,6 +342,9 @@ def show_summary_view():
 # --- Main App Logic ---
 initialize_state()
 
-if st.session_state.page_state == 'SETUP': show_setup_view()
-elif st.session_state.page_state == 'RUNNING': run_session_view()
-elif st.session_state.page_state == 'SUMMARY': show_summary_view()
+if st.session_state.page_state == 'SETUP':
+    show_setup_view()
+elif st.session_state.page_state == 'RUNNING':
+    run_session_view()
+elif st.session_state.page_state == 'SUMMARY':
+    show_summary_view()

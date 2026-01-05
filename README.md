@@ -312,6 +312,8 @@ TalkHeal/
    pip install -r requirements.txt
    ```
 
+   > **Having installation issues?** Check our [Installation Troubleshooting Guide](INSTALLATION_TROUBLESHOOTING.md) for solutions to common problems like timeout errors, slow downloads, and network issues.
+
 3. **Set up API key:**
    Go to your Streamlit [Secrets Settings](https://streamlit.io/cloud) and add:
 

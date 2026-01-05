@@ -1,5 +1,7 @@
 .streamlit/
 streamlit.toml
+migration
+trash
 
 # pycache
 __pycache__/

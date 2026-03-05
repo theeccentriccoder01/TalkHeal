@@ -288,6 +288,7 @@ TalkHeal/
 │   ├── Journaling.py           # Journaling UI page
 │   ├── Yoga.py                 # Yoga activity page
 │   └── selfHelpTools.py        # Tools/resources for self-help
+├── .env.example                 # Template for environment variables
 ├── .gitignore                   # Files/folders ignored by Git
 ├── Background.jpg
 ├── Background_Dark.jpg
@@ -357,25 +358,13 @@ TalkHeal/
    GEMINI_API_KEY = "YOUR_GOOGLE_GEMINI_API_KEY"
    ```
 
-4. **Set up OAuth (Optional but Recommended):**   
-   Create a `.env` file in the TalkHeal directory:
-   
-   ```env
-   # OAuth Configuration
-   OAUTH_REDIRECT_URI=http://localhost:8501/oauth_callback
-   
-   # Google OAuth (Get from Google Cloud Console)
-   GOOGLE_CLIENT_ID=your_google_client_id_here
-   GOOGLE_CLIENT_SECRET=your_google_client_secret_here
-   
-   # GitHub OAuth (Get from GitHub Developer Settings)
-   GITHUB_CLIENT_ID=your_github_client_id_here
-   GITHUB_CLIENT_SECRET=your_github_client_secret_here
-   
-   # Microsoft OAuth (Get from Azure App Registration)
-   MICROSOFT_CLIENT_ID=your_microsoft_client_id_here
-   MICROSOFT_CLIENT_SECRET=your_microsoft_client_secret_here
+4. **Set up environment variables:**
+   Copy the provided template and fill in your values:
+   ```bash
+   cp .env.example .env
    ```
+   Then edit `.env` with your actual credentials (API keys, OAuth secrets, etc.).
+   See [`.env.example`](.env.example) for all available options and setup links.
    
    For detailed OAuth setup instructions, see [OAUTH_SETUP.md](OAUTH_SETUP.md)
 

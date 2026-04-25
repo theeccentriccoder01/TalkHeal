@@ -80,17 +80,17 @@ Experience TalkHeal live here:
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat)
-![Visitors](https://api.visitorbadge.io/api/Visitors?path=eccentriccoder01%2FTalkHeal%20&countColor=%23263759&style=flat)
-![GitHub Forks](https://img.shields.io/github/forks/eccentriccoder01/TalkHeal)
-![GitHub Repo Stars](https://img.shields.io/github/stars/eccentriccoder01/TalkHeal)
-![GitHub Contributors](https://img.shields.io/github/contributors/eccentriccoder01/TalkHeal)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/eccentriccoder01/TalkHeal)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/eccentriccoder01/TalkHeal)
-![Github](https://img.shields.io/github/license/eccentriccoder01/TalkHeal)
-![GitHub Issues](https://img.shields.io/github/issues/eccentriccoder01/TalkHeal)
-![GitHub Closed Issues](https://img.shields.io/github/issues-closed-raw/eccentriccoder01/TalkHeal)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/eccentriccoder01/TalkHeal)
-![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/eccentriccoder01/TalkHeal)
+![Visitors](https://api.visitorbadge.io/api/Visitors?path=theeccentriccoder%2FTalkHeal%20&countColor=%23263759&style=flat)
+![GitHub Forks](https://img.shields.io/github/forks/theeccentriccoder/TalkHeal)
+![GitHub Repo Stars](https://img.shields.io/github/stars/theeccentriccoder/TalkHeal)
+![GitHub Contributors](https://img.shields.io/github/contributors/theeccentriccoder/TalkHeal)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/theeccentriccoder/TalkHeal)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/theeccentriccoder/TalkHeal)
+![Github](https://img.shields.io/github/license/theeccentriccoder/TalkHeal)
+![GitHub Issues](https://img.shields.io/github/issues/theeccentriccoder/TalkHeal)
+![GitHub Closed Issues](https://img.shields.io/github/issues-closed-raw/theeccentriccoder/TalkHeal)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/theeccentriccoder/TalkHeal)
+![GitHub Closed Pull Requests](https://img.shields.io/github/issues-pr-closed/theeccentriccoder/TalkHeal)
  </p>
  </div>
 
@@ -342,7 +342,7 @@ TalkHeal/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/eccentriccoder01/TalkHeal.git
+   git clone https://github.com/theeccentriccoder/TalkHeal.git
    cd TalkHeal
    ```
 
@@ -413,13 +413,13 @@ Your insights are invaluable to us. Reach out to us team for any inquiries, feed
 
 Thanks to these wonderful people for contributing 💖
 
-[![Contributors](https://contrib.rocks/image?repo=eccentriccoder01/TalkHeal)](https://github.com/eccentriccoder01/TalkHeal/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=theeccentriccoder/TalkHeal)](https://github.com/theeccentriccoder/TalkHeal/graphs/contributors)
 
 <p>
   <!-- Vaunt.dev (auto-updating SVG contributors graph) -->
-  <a href="https://github.com/eccentriccoder01/talkheal/graphs/contributors">
+  <a href="https://github.com/theeccentriccoder/talkheal/graphs/contributors">
     <img 
-      src="https://api.vaunt.dev/v1/github/entities/eccentriccoder01/repositories/talkheal/contributors?format=svg&limit=54" 
+      src="https://api.vaunt.dev/v1/github/entities/theeccentriccoder/repositories/talkheal/contributors?format=svg&limit=54" 
       width="900" 
       height="400" 
       alt="Contributors Graph by Vaunt.dev" 
@@ -437,8 +437,9 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Developed by [Eccentric Explorer](https://eccentriccoder01.github.io/Me)
+Developed by [Eccentric Explorer](https://theeccentriccoder.github.io/Me)
 
 Feel free to reach out with any questions or feedback\! Thanks for reading, here's a cookiepookie:
 
 ![Cat](https://github.com/XevenTech/xeventech/blob/main/cat.gif?raw=true "Thank You")
+

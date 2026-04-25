@@ -208,8 +208,9 @@ st.markdown("""
 # --- Footer Section ---
 st.markdown('''
     <div class="footer">
-        <p>Created with ❤️ by <b><a href="https://eccentriccoder01.github.io/Me" target="_blank">Eccentric Explorer</a></b></p>
+        <p>Created with ❤️ by <b><a href="https://theeccentriccoder.github.io/Me" target="_blank">Eccentric Explorer</a></b></p>
         <p><i>"It's absolutely okay not to be okay :)"</i></p>
         <p>Enhanced Version - May 2025</p>
     </div>
 ''', unsafe_allow_html=True)
+

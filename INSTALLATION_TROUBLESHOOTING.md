@@ -149,7 +149,7 @@ pip install -r requirements.txt
    ```bash
    pip install -v -r requirements.txt
    ```
-4. Report the issue on [GitHub Issues](https://github.com/eccentriccoder01/TalkHeal/issues) with:
+4. Report the issue on [GitHub Issues](https://github.com/theeccentriccoder/TalkHeal/issues) with:
    - Your OS and Python version
    - Full error message
    - Which solutions you've tried
@@ -179,3 +179,4 @@ streamlit run app.py
 ---
 
 **Note:** If you're contributing to TalkHeal, make sure to also check [CONTRIBUTING.md](CONTRIBUTING.md) for development setup instructions.
+

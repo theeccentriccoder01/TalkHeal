@@ -327,7 +327,7 @@ def show_login_page():
         title = "Welcome Back Healer!!"
         subtitle_text = "Login to continue your journey 🩷"
 
-    st.markdown('<div class="logo-animated"><img src="https://raw.githubusercontent.com/theeccentriccoder/TalkHeal/main/static_files/TalkHealLogo.png" alt="Logo"/></div>', unsafe_allow_html=True)
+    st.markdown('<div class="logo-animated"><img src="https://raw.githubusercontent.com/theeccentriccoder01/TalkHeal/main/static_files/TalkHealLogo.png" alt="Logo"/></div>', unsafe_allow_html=True)
     st.markdown(f'<div class="auth-title" style="color:#ffb6d5;">{title}</div>', unsafe_allow_html=True)
     st.markdown(f'<div class="subtitle">{subtitle_text}</div>', unsafe_allow_html=True)
 

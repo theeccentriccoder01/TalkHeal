@@ -149,7 +149,7 @@ pip install -r requirements.txt
    ```bash
    pip install -v -r requirements.txt
    ```
-4. Report the issue on [GitHub Issues](https://github.com/theeccentriccoder/TalkHeal/issues) with:
+4. Report the issue on [GitHub Issues](https://github.com/theeccentriccoder01/TalkHeal/issues) with:
    - Your OS and Python version
    - Full error message
    - Which solutions you've tried

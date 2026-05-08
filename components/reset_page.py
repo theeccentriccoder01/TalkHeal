@@ -149,7 +149,7 @@ def show_reset_password_page():
     )
 
     title = "Reset Your Password"
-    st.markdown('<div class="logo-animated"><img src="https://raw.githubusercontent.com/theeccentriccoder/TalkHeal/main/static_files/TalkHealLogo.png" alt="Logo"/></div>', unsafe_allow_html=True)
+    st.markdown('<div class="logo-animated"><img src="https://raw.githubusercontent.com/theeccentriccoder01/TalkHeal/main/static_files/TalkHealLogo.png" alt="Logo"/></div>', unsafe_allow_html=True)
     st.markdown(f'<div class="auth-title" style="color:#ffb6d5;">{title}</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Update Your password 🩷</div>', unsafe_allow_html=True)
 

@@ -236,7 +236,7 @@ def show():
     with col2:
         st.info("**Provide Feedback**")
         st.write("Have a suggestion or found a bug? We'd love to hear from you!")
-        st.markdown("[🐞 Report an issue on GitHub](https://github.com/theeccentriccoder/TalkHeal/issues)")
+        st.markdown("[🐞 Report an issue on GitHub](https://github.com/theeccentriccoder01/TalkHeal/issues)")
 
     st.markdown("</div>", unsafe_allow_html=True)
 

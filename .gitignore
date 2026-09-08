@@ -257,3 +257,5 @@ data
 *.sqlite3
 users.db
 journals.db
+
+trash
